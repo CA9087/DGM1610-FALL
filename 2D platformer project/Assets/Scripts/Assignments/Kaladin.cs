@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Variables : MonoBehaviour
+public class Kaladin : MonoBehaviour
 {
-    string firstName = "Connor";
-    int age = 19; 
-    float height = 5.75f; 
+    string firstName = "Kaladin";
+    int age = 20; 
+    float height = 6.5f; 
     bool married = false; 
-    
 
     // Start is called before the first frame update
     void Start()
