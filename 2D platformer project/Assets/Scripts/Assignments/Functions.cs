@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Functions : MonoBehaviour
 {
+    
     // string firstName;
     // string lastName;
     // int age;
@@ -24,14 +25,15 @@ public class Functions : MonoBehaviour
         // Customer(firstName, lastName, age);
         CalcAdd(11,23);
     }
+    
 
     int CalcAdd (int n1, int n2) 
     {
         Debug.Log("Number 1 = " + n1+" Number 2= " + n2);
         total = n1 + n2;
 
-        return total;
         Debug.Log(total);
+        return total;
     }
 
     // void Customer(string fName, string lName, int a)
