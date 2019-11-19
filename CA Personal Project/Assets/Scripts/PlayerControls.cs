@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     public float speed;
-    private float turnSpeed = 60f; 
+    private float turnSpeed = 60f;
+    public float horSpeed; 
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +25,8 @@ public class PlayerControls : MonoBehaviour
         float hor = Input.GetAxis("Horizontal");
         float ver = Input.GetAxis("Vertical");
         //this code makes the vehicle move
-        transform.Translate(Vector3.forward*Time.deltaTime * speed * ver);    
-        transform.Rotate(Vector3.up, turnSpeed * hor * Time.deltaTime);
+        transform.Translate(Vector3.forward *Time.deltaTime * speed * ver);    
+        transform.Rotate(Vector3.up, turnSpeed * hor * Time.deltaTime * horSpeed);
     }
 }
     
