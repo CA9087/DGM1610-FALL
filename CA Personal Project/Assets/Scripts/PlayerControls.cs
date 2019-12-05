@@ -5,14 +5,16 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     public float speed;
-    private float turnSpeed = 60f;
+    private float turnSpeed = 120f;
     public float horSpeed; 
     public GameObject projectilePrefab;
     private Rigidbody pRB;
+    public GameObject[] blasters;
 
     // Start is called before the first frame update
     void Start()
     {
+        blasters = GameObject.FindGameObjectsWithTag("Them Guns");
         pRB = GetComponent<Rigidbody>();
     }
 
@@ -23,7 +25,10 @@ public class PlayerControls : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            foreach (GameObject test in blasters)
+            {
+            Instantiate(projectilePrefab, test.transform.position, transform.rotation);
+            }
         }
     }
     //makes the dude move

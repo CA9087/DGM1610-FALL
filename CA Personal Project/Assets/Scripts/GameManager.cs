@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //SpawnMap();
+        SpawnMap();
     }
 
     // Update is called once per frame
@@ -32,11 +32,11 @@ public class GameManager : MonoBehaviour
     //This will create the map at the beginning of the game (and potentially for every level if we get there)
     void SpawnMap()
     {
-        //rockCount = FindObjectsOfType<Rock>().Length;
-        if (rockCount == 0)
+       
+        for (rockCount = 0; rockCount < 20; rockCount ++)
         {
         int astroidIndex = Random.Range(0, astroidPrefabs.Length);
-        Instantiate (astroidPrefabs[astroidIndex], GenerateSpawnPosition(), astroidPrefabs[astroidIndex].transform.rotation);
+        Instantiate (astroidPrefabs[astroidIndex], GenerateSpawnPosition(), astroidPrefabs[astroidIndex].transform.rotation);        
         }
     }
 }

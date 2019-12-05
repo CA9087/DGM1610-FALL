@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Rock
+  - Them Guns
   layers:
   - Default
   - TransparentFX
