@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - Rock
   - Them Guns
+  - Waypoint
+  - The Gun
+  - EnemyLaser
   layers:
   - Default
   - TransparentFX
